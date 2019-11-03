@@ -28,18 +28,18 @@ export class Search extends Component {
   render() {
     return (
       <div className="Search">
-        <form onSubmit={this.handleSubmit}>
-           <label>
-             <span>Search for books</span>
-             <input
-               type="search"
-               placeholder="Search For Books"
-               name="search"
-               value={this.state.search}
-               onChange={this.handleInput}
-             />
-             <button type="submit">Search Books</button>
-           </label>
+        <section className="searchTitle">
+           <h2>Search for books</h2>
+        </section>
+        <form className="searchForm" onSubmit={this.handleSubmit}>
+           <input
+             type="search"
+             placeholder="Search For Books"
+             name="search"
+             value={this.state.search}
+             onChange={this.handleInput}
+           />
+           <button type="submit">Search Books</button>
          </form>
       </div>
     );

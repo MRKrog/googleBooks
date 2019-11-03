@@ -1,14 +1,38 @@
 .Search {
-  display: block;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  align-items: center;
+
+  .searchTitle {
+    font-family: $fontOswald;
+    font-size: 2em;
+    color: #fff;
+
+    h2 {
+      font-weight: 100;
+      margin: 0;
+    }
+  }
+
+  .searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+  }
 
   input {
-    width: 50%;
+    width: 70%;
     outline: none;
     padding: .7em;
     border-radius: 5px;
     border: none;
     box-shadow: 0px 0px 3px 5px #00000024;
   }
+
+  button {
+    width: 30%;
+  }
+
 }

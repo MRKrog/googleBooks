@@ -1,6 +1,5 @@
 .BookDisplay {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1em;
-  color: #fff;
 }
