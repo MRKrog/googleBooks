@@ -29,17 +29,17 @@ export class Search extends Component {
     return (
       <div className="Search">
         <section className="searchTitle">
-           <h2>Search for books</h2>
+           <h2>Google Books</h2>
         </section>
         <form className="searchForm" onSubmit={this.handleSubmit}>
            <input
              type="search"
-             placeholder="Search For Books"
+             placeholder="Enter Your Search"
              name="search"
              value={this.state.search}
              onChange={this.handleInput}
            />
-           <button type="submit">Search Books</button>
+           <button type="submit">Search</button>
          </form>
       </div>
     );
