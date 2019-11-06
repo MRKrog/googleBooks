@@ -20,15 +20,14 @@ export class App extends Component {
   }
 
   handleSearch = async (search) => {
-    const { setBookSearch, setLoading } = this.props;
+    const { setBookSearch, setLoading, savedBooks } = this.props;
     const url = "https://www.googleapis.com/books/v1/volumes";
+    setLoading(true)
     try {
-      setLoading(true)
       const response = await fetch(`${url}?q=${search}`)
       if(!response.ok) { throw new Error('Fetch Call Cannot Be Made')}
       const data = await response.json()
-      console.log(data);
-      let updatedBooks = cleanBooks(data.items)
+      let updatedBooks = cleanBooks(data.items, savedBooks)
       await setBookSearch(updatedBooks)
     } catch(error){
       this.props.setError(error.message)
@@ -93,7 +92,9 @@ export const mapDispatchToProps = (dispatch) => ({
 
 App.propTypes = {
   error: PropTypes.string,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  searchedBooks: PropTypes.array.isRequired,
+  savedBooks: PropTypes.array.isRequired,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

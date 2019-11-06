@@ -1,4 +1,5 @@
-export const cleanBooks = (books) => {
+
+export const cleanBooks = (books, savedBooks) => {
   let filteredBooks = books.map(book => {
     return {
       id: book.id,
@@ -6,16 +7,17 @@ export const cleanBooks = (books) => {
       author: book.volumeInfo.authors ? book.volumeInfo.authors[0] : null,
       image: book.volumeInfo.imageLinks.thumbnail,
       publisher: book.volumeInfo.publisher ? book.volumeInfo.publisher : null,
-      savedStatus: false
+      savedStatus: handleBookReload(book.id, savedBooks)
     }
   })
-  console.log('filteredBooks', filteredBooks);
   return filteredBooks;
 }
 
-export const handleBookReload = (book) => {
-  let testBook = book;
+export const handleBookReload = (bookResultID, savedBooks) => {
+  let bookSavedOnReload = savedBooks.find(book => {
+    return book.id == bookResultID
+  })
 
-  
-  return book;
+  if(bookSavedOnReload) return true
+  return false
 }
