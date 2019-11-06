@@ -1,6 +1,10 @@
 .Loading {
   display: flex;
-  margin-top: 6em;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  flex-grow: 1;
+  flex-direction: column;
 
   .Loading-logo {
     animation: Loading-logo-spin infinite 20s linear;

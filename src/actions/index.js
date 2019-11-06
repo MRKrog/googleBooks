@@ -22,3 +22,8 @@ export const setRemoveBook = (bookID) => ({
   type: "BOOK_REMOVE",
   bookID
 })
+
+export const updateBookDisplay = (bookID) => ({
+  type: "BOOK_UPDATE",
+  bookID
+})

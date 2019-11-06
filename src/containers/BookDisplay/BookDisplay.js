@@ -10,13 +10,15 @@ export class BookDisplay extends Component {
     return (
       <div className="BookDisplay">
         {
-          searchedBooks.map(book => (
-            <Book key={book.id}
-                  id={book.id}
-                  title={book.volumeInfo.title}
-                  author={book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}
-                  image={book.volumeInfo.imageLinks}
-                  publisher={book.volumeInfo.publisher} />
+          searchedBooks.map(singleBook => (
+            <Book key={singleBook.id}
+                  id={singleBook.id}
+                  title={singleBook.title}
+                  author={singleBook.author}
+                  image={singleBook.image}
+                  publisher={singleBook.publisher}
+                  savedStatus={singleBook.savedStatus}
+              />
             )
           )}
       </div>
@@ -25,17 +27,11 @@ export class BookDisplay extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  error: state.error,
-  loading: state.loading,
-})
-
-export const mapDispatchToProps = (dispatch) => ({
-  setError: (data) => dispatch(actions.setError(data)),
-  setLoading: (data) => dispatch(actions.setLoading(data)),
+  searchedBooks: state.searchedBooks,
 })
 
 BookDisplay.propTypes = {
   searchedBooks: PropTypes.array.isRequired,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookDisplay);
+export default connect(mapStateToProps, null)(BookDisplay);

@@ -7,10 +7,17 @@ import { Search } from '../Search/Search';
 import BookDisplay from '../BookDisplay/BookDisplay';
 import { Loading } from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
+import { cleanBooks } from '../../utility/cleanBooks'
 
 import * as actions from '../../actions/index';
 
 export class App extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      modal: false,
+    }
+  }
 
   handleSearch = async (search) => {
     const { setBookSearch, setLoading } = this.props;
@@ -20,7 +27,9 @@ export class App extends Component {
       const response = await fetch(`${url}?q=${search}`)
       if(!response.ok) { throw new Error('Fetch Call Cannot Be Made')}
       const data = await response.json()
-      await setBookSearch(data)
+      console.log(data);
+      let updatedBooks = cleanBooks(data.items)
+      await setBookSearch(updatedBooks)
     } catch(error){
       this.props.setError(error.message)
     }
@@ -48,7 +57,7 @@ export class App extends Component {
         <div className="BookResults">
           {
             searchedBooks.length > 0 &&
-            <BookDisplay searchedBooks={searchedBooks}/>
+            <BookDisplay />
           }
         </div>
       }
