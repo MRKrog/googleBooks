@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Route, NavLink } from 'react-router-dom';
 
 import { Search } from '../Search/Search';
 import BookDisplay from '../BookDisplay/BookDisplay';
+import Modal from '../Modal/Modal';
 import { Loading } from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
 import { cleanBooks } from '../../utility/cleanBooks'
@@ -36,20 +36,28 @@ export class App extends Component {
     setLoading(false)
   }
 
-  // <Route path="/Search" render={() => {
-  //   return <Search handleSearch={this.handleSearch} />
-  // }}/>
+  showModal = () => {
+    this.setState({
+      modal: true
+    })
+  }
 
-  // <NavLink className="Button-Container" to="/WeatherDetails">
-  //   <div className="Details-Button">
-  //     <i className="fas fa-plus-square"></i>
-  //   </div>
-  // </NavLink>
+  hideModal = () => {
+    this.setState({
+      modal: false
+    })
+  }
 
   render() {
-    const { loading, searchedBooks } = this.props;
+    const { loading, searchedBooks, savedBooks } = this.props;
+    const { modal } = this.state;
     return (
       <div className="App">
+      { savedBooks.length > 0 &&
+        <button className="modal-button" onClick={this.showModal}>
+          View Saved Books <i className="fas fa-eye"></i>
+        </button>
+      }
       <Search handleSearch={this.handleSearch} />
       {
         loading ?
@@ -61,6 +69,10 @@ export class App extends Component {
           }
         </div>
       }
+      {
+        modal &&
+        <Modal hideModal={this.hideModal} />
+      }
       </div>
     );
   }
@@ -70,6 +82,7 @@ export const mapStateToProps = (state) => ({
   error: state.error,
   loading: state.loading,
   searchedBooks: state.searchedBooks,
+  savedBooks: state.savedBooks,
 })
 
 export const mapDispatchToProps = (dispatch) => ({

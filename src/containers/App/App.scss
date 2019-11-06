@@ -5,4 +5,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  .modal-button {
+    opacity: 1;
+    border: none;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: .04em;
+    font-family: $fontOswald;
+    background: #2196F3;
+    color: #fff;
+    z-index: 99;
+    line-height: 1;
+    border-radius: 5px;
+    padding: .5em 1em;
+    box-shadow: 1px 1px 8px 2px #000000c7;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    &:hover {
+      opacity: .95;
+    }
+
+    i {
+      font-weight: 100;
+      opacity: .8;
+    }
+  }
 }
