@@ -8,7 +8,13 @@ export class BookDisplay extends Component {
     const { searchedBooks } = this.props;
     return (
       <div className="BookDisplay">
-        { searchedBooks.map(book => <Book key={book.id} {...book}/> ) }
+        {
+          searchedBooks.map(book => (
+          <Book key={book.id}
+                title={book.volumeInfo.title}
+                author={book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}
+                image={book.volumeInfo.imageLinks}/> )
+        )}
       </div>
     )
   }

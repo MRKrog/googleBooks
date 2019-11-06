@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 export class Book extends Component {
   constructor(props) {
@@ -22,26 +21,34 @@ export class Book extends Component {
 
   render() {
     const { saved } = this.state;
+    let bookAuthor;
     let savedBtn;
+    // console.log('authoer',this.props.author[0]);
     if(saved){
       savedBtn = "fas fa-star"
     } else {
-      savedBtn = "far fa-star"
+      savedBtn = "far fa-star";
+    }
+
+    if(this.props.author == null){
+      bookAuthor = 'N/A'
+    } else {
+      bookAuthor = this.props.author
     }
 
     return (
       <div className="Book">
         <div className="BookContent">
           <section className="BookImage">
-            <img src={this.props.volumeInfo.imageLinks.thumbnail} />
+            <img src={this.props.image.thumbnail} alt="background-books"/>
           </section>
           <section className="BookCopy">
           <button onClick={this.handleSave}>
             <i className={savedBtn}></i>
           </button>
-          <h5><span>Title:</span> {this.props.volumeInfo.title}</h5>
-          <h5><span>Author:</span> {this.props.volumeInfo.authors[0]}</h5>
-          <h5><span>Publisher:</span> {this.props.volumeInfo.publisher}</h5>
+          <h5><span>Title:</span> {this.props.title}</h5>
+          <h5><span>Author:</span> {bookAuthor}</h5>
+          <h5><span>Publisher:</span> {this.props.publisher}</h5>
           </section>
         </div>
       </div>

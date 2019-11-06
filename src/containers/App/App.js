@@ -18,19 +18,17 @@ export class App extends Component {
   }
 
   handleSearch = async (search) => {
-    const { setBookSearch } = this.props;
-    console.log('in handle search', search);
-    this.props.setLoading(true)
+    const { setBookSearch, setLoading } = this.props;
     const url = "https://www.googleapis.com/books/v1/volumes";
     try {
+      setLoading(true)
       const response = await fetch(`${url}?q=${search}`)
       if(!response.ok) { throw new Error('Fetch Call Cannot Be Made')}
       const data = await response.json()
-      await setBookSearch(data)
       console.log(data);
-      this.props.setLoading(false)
+      await setBookSearch(data)
+      setLoading(false)
     } catch(error){
-      console.log(error.message);
       this.props.setError(error.message)
     }
   }

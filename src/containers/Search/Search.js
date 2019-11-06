@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 
 export class Search extends Component {
   constructor(props){
@@ -12,10 +11,12 @@ export class Search extends Component {
   handleSubmit = (event) => {
     const { search } = this.state;
     event.preventDefault();
-    this.props.handleSearch(search)
-    this.setState({
-      search: ''
-    })
+    if(search.length > 0){
+      this.props.handleSearch(search)
+      this.setState({
+        search: ''
+      })
+    }
   }
 
   handleInput = (event) => {
@@ -44,8 +45,4 @@ export class Search extends Component {
       </div>
     );
   }
-}
-
-Search.propTypes = {
-
 }
