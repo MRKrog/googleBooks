@@ -13,7 +13,9 @@ export class BookDisplay extends Component {
           <Book key={book.id}
                 title={book.volumeInfo.title}
                 author={book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}
-                image={book.volumeInfo.imageLinks}/> )
+                image={book.volumeInfo.imageLinks}
+                publisher={book.volumeInfo.publisher} />)
+
         )}
       </div>
     )
