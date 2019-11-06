@@ -9,13 +9,8 @@ import { Loading } from '../../components/Loading/Loading';
 import Error from '../../components/Error/Error';
 
 import * as actions from '../../actions/index';
-// import { } from '../../utility/cleanReports';
 
 export class App extends Component {
-
-  componentDidMount() {
-
-  }
 
   handleSearch = async (search) => {
     const { setBookSearch, setLoading } = this.props;
@@ -25,12 +20,11 @@ export class App extends Component {
       const response = await fetch(`${url}?q=${search}`)
       if(!response.ok) { throw new Error('Fetch Call Cannot Be Made')}
       const data = await response.json()
-      console.log(data);
       await setBookSearch(data)
-      setLoading(false)
     } catch(error){
       this.props.setError(error.message)
     }
+    setLoading(false)
   }
 
   // <Route path="/Search" render={() => {
@@ -52,7 +46,10 @@ export class App extends Component {
         loading ?
         <Loading /> :
         <div className="BookResults">
-          <BookDisplay searchedBooks={searchedBooks}/>
+          {
+            searchedBooks.length > 0 &&
+            <BookDisplay searchedBooks={searchedBooks}/>
+          }
         </div>
       }
       </div>

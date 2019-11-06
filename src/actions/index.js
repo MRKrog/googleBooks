@@ -12,3 +12,13 @@ export const setBookSearch = (books) => ({
   type: "BOOK_SEARCH",
   books
 })
+
+export const setSaveBook = (book) => ({
+  type: "BOOK_SAVE",
+  book
+})
+
+export const setRemoveBook = (bookID) => ({
+  type: "BOOK_REMOVE",
+  bookID
+})
