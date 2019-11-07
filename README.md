@@ -1,8 +1,19 @@
-# WeatherMind
+# Google Books
 
 ## Overview:
 
-Google Book is a take home challenge from 8th Light
+Google Book is a take home challenge from 8th Light. This web app allows you to search for books from googles api and then save and view all of them together. The requirements for this project were:
+
+- Type in a query and display a list of 5 books matching that query.
+- Each item in the list should include the book's author, title, and publishing company.
+- A user should be able to select a book from the five displayed to save to a “Reading List”
+- View a “Reading List” with all the books the user has selected from their queries -- this is a local reading list and not tied to Google Books’s account features.
+
+## Preview:
+
+Home Page Search           |  View Saved Books
+:-------------------------:|:-------------------------:
+<img src="src/media/Home.jpg" alt="Home Page">  |  <img src="src/media/Favorite.jpg" alt="Favorite">
 
 ## Getting Started:
 
@@ -31,4 +42,4 @@ And tested using:
 - [Michael Krog](https://github.com/MRKrog)
 
 ---
-**[Back to top]()**
+**[Back to top](https://github.com/MRKrog/googleBooks/blob/master/README.md)**
