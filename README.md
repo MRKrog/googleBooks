@@ -1,7 +1,7 @@
 # Google Books
 
 ## View Application:
-[https://paletteui.herokuapp.com/](https://paletteui.herokuapp.com/)
+[https://mrkrog.github.io/googleBooks/](https://mrkrog.github.io/googleBooks/)
 
 ## Overview:
 
