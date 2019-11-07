@@ -15,7 +15,7 @@ export const cleanBooks = (books, savedBooks) => {
 
 export const handleBookReload = (bookResultID, savedBooks) => {
   let bookSavedOnReload = savedBooks.find(book => {
-    return book.id == bookResultID
+    return book.id === bookResultID
   })
 
   if(bookSavedOnReload) return true

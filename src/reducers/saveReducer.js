@@ -5,7 +5,7 @@ export const saveReducer = (state = [], action) => {
       return state
     case "BOOK_REMOVE":
       let updatedBooks = state.filter(savedBook => {
-        return savedBook.id != action.bookID
+        return savedBook.id !== action.bookID
       })
       return updatedBooks
     default:

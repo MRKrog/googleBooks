@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App, mapStateToProps, mapDispatchToProps } from './App';
-import { setLoading, setError } from '../../actions/index';
+import { setLoading, setError, setBookSearch } from '../../actions/index';
 
 describe('App', () => {
 

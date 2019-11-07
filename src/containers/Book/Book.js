@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
 
-class Book extends Component {
+export class Book extends Component {
 
   handleSave = (event) => {
     event.preventDefault();
@@ -16,7 +17,7 @@ class Book extends Component {
   }
 
   render() {
-    const { id, title, author, image, publisher, savedStatus } = this.props;
+    const { title, author, image, publisher, savedStatus } = this.props;
     return (
       <div className="Book">
         <div className="BookContent">
@@ -42,5 +43,16 @@ export const mapDispatchToProps = (dispatch) => ({
   setRemoveBook: (data) => dispatch(actions.setRemoveBook(data)),
   updateBookDisplay: (data) => dispatch(actions.updateBookDisplay(data)),
 })
+
+Book.propTypes = {
+  setSaveBook: PropTypes.func,
+  setRemoveBook: PropTypes.func,
+  updateBookDisplay: PropTypes.func,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  image: PropTypes.string,
+  publisher: PropTypes.string,
+  savedStatus: PropTypes.bool,
+}
 
 export default connect(null, mapDispatchToProps)(Book)

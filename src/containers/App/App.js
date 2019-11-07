@@ -93,8 +93,11 @@ export const mapDispatchToProps = (dispatch) => ({
 App.propTypes = {
   error: PropTypes.string,
   loading: PropTypes.bool,
-  searchedBooks: PropTypes.array.isRequired,
-  savedBooks: PropTypes.array.isRequired,
+  searchedBooks: PropTypes.array,
+  savedBooks: PropTypes.array,
+  setError: PropTypes.func,
+  setLoading: PropTypes.func,
+  setBookSearch: PropTypes.func,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

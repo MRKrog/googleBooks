@@ -8,7 +8,6 @@ $fontOswald: 'Oswald', sans-serif;
 @import './containers/BookDisplay/BookDisplay';
 @import './containers/Book/Book';
 @import './containers/Modal/Modal';
-@import './containers/Header/Header';
 @import './containers/Search/Search';
 @import './components/Loading/Loading';
 
@@ -18,7 +17,7 @@ $fontOswald: 'Oswald', sans-serif;
 }
 
 html {
-  background-image: url('./media/booksBG.jpg');
+  background: radial-gradient(rgba(40, 44, 52, .95) 0%, rgba(40, 44, 52, 0.5) 90%), url('./media/booksBG.jpg');
   background-size: cover;
   height: 100%;
 }

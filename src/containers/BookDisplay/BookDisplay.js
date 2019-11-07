@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Book from '../Book/Book';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/index';
 
 export class BookDisplay extends Component {
   render() {

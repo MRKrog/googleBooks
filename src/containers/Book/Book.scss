@@ -4,7 +4,7 @@
   align-items: center;
   margin: 2%;
   height: 190px;
-  background: #7b7b7be0;
+  background: #333d46eb;
   border-radius: 3px;
 
   .BookContent {
@@ -17,6 +17,9 @@
     .BookImage {
       display: flex;
       padding-right: 10px;
+      @media screen and (max-width: 1080px) {
+        width: 30%;
+      }
 
       img {
         display: block;
@@ -29,6 +32,9 @@
       justify-content: space-around;
       position: relative;
       flex-grow: 1;
+      background: #2a3b44cc;
+      padding-left: 10px;
+      box-shadow: inset 0px 0px 2px 0px #0000007a;
 
       button {
         position: absolute;
@@ -53,6 +59,10 @@
         font-size: 15px;
         font-weight: 100;
         font-family: $fontRobotoCond;
+
+        @media screen and (min-width: 1080px) {
+          font-size: 18px;
+        }
 
         span {
           font-style: italic;

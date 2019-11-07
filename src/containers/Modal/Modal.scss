@@ -6,11 +6,22 @@
   top: 0px;
   left: 0px;
   position: fixed;
-  background: #000000f2;
+  background: rgba(8, 8, 8, 0.97);
   padding: 2%;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-family: $fontOswald;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+    margin: 0;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
 
   .hideModalBtn {
     position: absolute;

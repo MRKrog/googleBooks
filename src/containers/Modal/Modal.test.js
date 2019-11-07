@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { BookDisplay, mapStateToProps } from './BookDisplay';
+import { Modal, mapStateToProps } from './Modal';
 import { shallow } from 'enzyme';
 
-const mockSearchedBooks = []
+const mockSavedBooks = []
 
-describe('BookDisplay', () => {
+describe('Modal', () => {
 
-  describe('BookDisplay Component', () => {
+  describe('Modal Component', () => {
     let wrapper;
 
     beforeEach(() => {
-      wrapper = shallow(<BookDisplay />)
+      wrapper = shallow(<Modal />)
     })
 
     it('should match the snapshot', () => {
