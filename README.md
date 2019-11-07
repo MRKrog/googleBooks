@@ -29,10 +29,9 @@ Start up in your terminal: ```$ npm start ```
 
 ### Technologies Used
 Google Book was built using:
-- [SCSS](https://sass-lang.com/)
 - [React.js](https://reactjs.org/)
-- [React-Router](https://reacttraining.com/react-router/)
 - [Redux.js](https://redux.js.org/)
+- [SCSS](https://sass-lang.com/)
 - [Google Book API](https://developers.google.com/maps/documentation/)
 
 And tested using:
