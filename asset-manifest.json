@@ -1,15 +1,23 @@
 {
-  "main.css": "/MRKrog/googleBooks/static/css/main.0afb6e2b.chunk.css",
-  "main.js": "/MRKrog/googleBooks/static/js/main.d64206e0.chunk.js",
-  "main.js.map": "/MRKrog/googleBooks/static/js/main.d64206e0.chunk.js.map",
-  "runtime~main.js": "/MRKrog/googleBooks/static/js/runtime~main.56114eda.js",
-  "runtime~main.js.map": "/MRKrog/googleBooks/static/js/runtime~main.56114eda.js.map",
-  "static/js/2.58b9f891.chunk.js": "/MRKrog/googleBooks/static/js/2.58b9f891.chunk.js",
-  "static/js/2.58b9f891.chunk.js.map": "/MRKrog/googleBooks/static/js/2.58b9f891.chunk.js.map",
-  "index.html": "/MRKrog/googleBooks/index.html",
-  "precache-manifest.8fa18437b70ac863ec8841229105cbae.js": "/MRKrog/googleBooks/precache-manifest.8fa18437b70ac863ec8841229105cbae.js",
-  "service-worker.js": "/MRKrog/googleBooks/service-worker.js",
-  "static/css/main.0afb6e2b.chunk.css.map": "/MRKrog/googleBooks/static/css/main.0afb6e2b.chunk.css.map",
-  "static/media/index.scss": "/MRKrog/googleBooks/static/media/booksBG.ac66c3e9.jpg",
-  "static/media/logo.svg": "/MRKrog/googleBooks/static/media/logo.cd2fd5e7.svg"
+  "files": {
+    "main.css": "/googleBooks/static/css/main.1df5cc94.chunk.css",
+    "main.js": "/googleBooks/static/js/main.812a2077.chunk.js",
+    "main.js.map": "/googleBooks/static/js/main.812a2077.chunk.js.map",
+    "runtime-main.js": "/googleBooks/static/js/runtime-main.34b51635.js",
+    "runtime-main.js.map": "/googleBooks/static/js/runtime-main.34b51635.js.map",
+    "static/js/2.7be12c47.chunk.js": "/googleBooks/static/js/2.7be12c47.chunk.js",
+    "static/js/2.7be12c47.chunk.js.map": "/googleBooks/static/js/2.7be12c47.chunk.js.map",
+    "index.html": "/googleBooks/index.html",
+    "precache-manifest.6f2499ff44566b9a23881511ae3c2d74.js": "/googleBooks/precache-manifest.6f2499ff44566b9a23881511ae3c2d74.js",
+    "service-worker.js": "/googleBooks/service-worker.js",
+    "static/css/main.1df5cc94.chunk.css.map": "/googleBooks/static/css/main.1df5cc94.chunk.css.map",
+    "static/media/index.scss": "/googleBooks/static/media/booksBG.ac66c3e9.jpg",
+    "static/media/logo.svg": "/googleBooks/static/media/logo.cd2fd5e7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34b51635.js",
+    "static/js/2.7be12c47.chunk.js",
+    "static/css/main.1df5cc94.chunk.css",
+    "static/js/main.812a2077.chunk.js"
+  ]
 }
