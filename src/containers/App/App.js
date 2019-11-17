@@ -22,9 +22,11 @@ export class App extends Component {
   handleSearch = async (search) => {
     const { setBookSearch, setLoading, savedBooks } = this.props;
     const url = "https://www.googleapis.com/books/v1/volumes";
+    const encodedSearch = encodeURI(search);
+    const updatedTerm = this.checkQuery(encodedSearch)
     setLoading(true)
     try {
-      const response = await fetch(`${url}?q=${search}`)
+      const response = await fetch(`${url}?q=${updatedTerm}`)
       if(!response.ok) { throw new Error('Fetch Call Cannot Be Made')}
       const data = await response.json()
       let updatedBooks = cleanBooks(data.items, savedBooks)
@@ -33,6 +35,13 @@ export class App extends Component {
       this.props.setError(error.message)
     }
     setLoading(false)
+  }
+
+  checkQuery = (search) => {
+    if(search.includes('&')){
+      search = search.replace(/&/g, 'and')
+    }
+    return search
   }
 
   showModal = () => {
