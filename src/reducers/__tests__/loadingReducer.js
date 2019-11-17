@@ -1,10 +1,11 @@
-import { loadingReducer } from '../loadingReducer'
+import { loadingReducer } from '../loadingReducer';
+import * as actions from '../../actions';
 
 describe('loadingReducer', () => {
 
   it('should return the initial state', () => {
-    const expected = true
-    const result = loadingReducer(undefined, {})
+    const expected = false
+    const result = loadingReducer(false, {})
     expect(result).toEqual(expected)
   })
 
@@ -17,5 +18,13 @@ describe('loadingReducer', () => {
    const result = loadingReducer(true, mockAction)
    expect(result).toEqual(expected)
  })
+
+  it('should return a boolean to global state for loading', () => {
+    const action = actions.setLoading(true);
+    const initialState = '';
+    const expected = true
+    const result = loadingReducer(initialState, action);
+    expect(result).toEqual(expected);
+  });
 
 })
