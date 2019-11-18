@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book Book Component should match the snapshot 1`] = `
+<div
+  className="Book"
+>
+  <div
+    className="BookContent"
+  >
+    <section
+      className="BookImage"
+    >
+      <img
+        alt="background-books"
+      />
+    </section>
+    <section
+      className="BookCopy"
+    >
+      <button
+        onClick={[Function]}
+      >
+        <i
+          className="far fa-star"
+        />
+      </button>
+      <h5>
+        <span>
+          Title:
+        </span>
+         
+      </h5>
+      <h5>
+        <span>
+          Author:
+        </span>
+         
+      </h5>
+      <h5>
+        <span>
+          Publisher:
+        </span>
+         
+      </h5>
+    </section>
+  </div>
+</div>
+`;
