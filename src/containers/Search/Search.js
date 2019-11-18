@@ -10,13 +10,11 @@ export class Search extends Component {
   }
 
   handleSubmit = (event) => {
-    const { search } = this.state;
     event.preventDefault();
+    const { search } = this.state;
     if(search.length > 0){
       this.props.handleSearch(search)
-      this.setState({
-        search: ''
-      })
+      this.setState({search: ''})
     }
   }
 
@@ -33,7 +31,7 @@ export class Search extends Component {
         <section className="searchTitle">
            <h2>Google Books</h2>
         </section>
-        <form className="searchForm" onSubmit={this.handleSubmit}>
+        <form className="searchForm">
            <input
              type="search"
              placeholder="Enter Your Search"
@@ -41,7 +39,7 @@ export class Search extends Component {
              value={this.state.search}
              onChange={this.handleInput}
            />
-           <button type="submit">Search</button>
+           <button type="submit" className="btnClick" onClick={this.handleSubmit}>Search</button>
          </form>
       </div>
     );

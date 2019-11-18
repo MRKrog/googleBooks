@@ -1,3 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookDisplay BookDisplay Component should match the snapshot 1`] = `undefined`;
+exports[`BookDisplay BookDisplay Component should match the snapshot 1`] = `
+<div
+  className="BookDisplay"
+>
+  <Connect(Book)
+    author="Stuart Farrimond"
+    id="az8pDwAAQBAJ"
+    image="http://books.google.com/books/content?id=az8pDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    key="az8pDwAAQBAJ"
+    publisher="Penguin"
+    savedStatus={false}
+    title="The Science of Cooking"
+  />
+  <Connect(Book)
+    author="Cathy K. Kaufman"
+    id="IFiIg7elnwIC"
+    image="http://books.google.com/books/content?id=IFiIg7elnwIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    key="IFiIg7elnwIC"
+    publisher="Greenwood Publishing Group"
+    savedStatus={false}
+    title="Cooking in Ancient Civilizations"
+  />
+</div>
+`;

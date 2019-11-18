@@ -1,3 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal Modal Component should match the snapshot 1`] = `undefined`;
+exports[`Modal Modal Component should match the snapshot 1`] = `
+<div
+  className="Modal"
+>
+  <h2>
+    Your Saved Books
+  </h2>
+  <button
+    className="hideModalBtn"
+    onClick={[MockFunction]}
+  >
+    X
+  </button>
+  <div
+    className="BookDisplay"
+  >
+    <Connect(Book)
+      author="Cathy K. Kaufman"
+      id="IFiIg7elnwIC"
+      image="http://books.google.com/books/content?id=IFiIg7elnwIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      key="IFiIg7elnwIC"
+      publisher="Greenwood Publishing Group"
+      savedStatus={true}
+      title="Cooking in Ancient Civilizations"
+    />
+  </div>
+</div>
+`;

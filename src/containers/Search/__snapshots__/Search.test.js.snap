@@ -13,7 +13,6 @@ exports[`Search should match the snapshot 1`] = `
   </section>
   <form
     className="searchForm"
-    onSubmit={[Function]}
   >
     <input
       name="search"
@@ -23,6 +22,8 @@ exports[`Search should match the snapshot 1`] = `
       value=""
     />
     <button
+      className="btnClick"
+      onClick={[Function]}
       type="submit"
     >
       Search

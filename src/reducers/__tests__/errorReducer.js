@@ -1,4 +1,5 @@
-import { errorReducer } from '../errorReducer'
+import { errorReducer } from '../errorReducer';
+import * as actions from '../../actions';
 
 describe('errorReducer', () => {
 
