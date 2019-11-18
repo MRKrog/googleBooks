@@ -1,10 +1,7 @@
 
 export const cleanBooks = (books, savedBooks) => {
-  console.log('filteredBooks', books);
   let filteredBooks = books.map(book => {
-    console.log('book', book);
     return {
-      // id: 1
       id: book.id,
       title: book.volumeInfo.title,
       author: book.volumeInfo.authors ? book.volumeInfo.authors[0] : null,
@@ -13,7 +10,6 @@ export const cleanBooks = (books, savedBooks) => {
       savedStatus: handleBookReload(book.id, savedBooks)
     }
   })
-  console.log('filteredBooks', filteredBooks);
   return filteredBooks;
 }
 

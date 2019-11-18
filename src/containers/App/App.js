@@ -29,7 +29,6 @@ export class App extends Component {
       const response = await fetch(`${url}?q=${updatedTerm}`)
       if(!response.ok) { throw new Error('Fetch Call Cannot Be Made')}
       const data = await response.json()
-      console.log(data);
       let updatedBooks = cleanBooks(data.items, savedBooks)
       await setBookSearch(updatedBooks)
     } catch(error){
