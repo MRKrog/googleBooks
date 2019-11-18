@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Book Book Component should match the snapshot 1`] = `
+<div
+  className="Book"
+>
+  <div
+    className="BookContent"
+  >
+    <section
+      className="BookImage"
+    >
+      <img
+        alt="background-books"
+        src="http://books.google.com/books/content?id=az8pDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      />
+    </section>
+    <section
+      className="BookCopy"
+    >
+      <button
+        onClick={[Function]}
+      >
+        <i
+          className="far fa-star"
+        />
+      </button>
+      <h5>
+        <span>
+          Title:
+        </span>
+         
+        The Science of Cooking
+      </h5>
+      <h5>
+        <span>
+          Author:
+        </span>
+         
+        Stuart Farrimond
+      </h5>
+      <h5>
+        <span>
+          Publisher:
+        </span>
+         
+        Penguin
+      </h5>
+    </section>
+  </div>
+</div>
+`;
