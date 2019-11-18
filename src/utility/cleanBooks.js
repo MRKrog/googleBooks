@@ -8,10 +8,9 @@ export const cleanBooks = (books, savedBooks) => {
       id: book.id,
       title: book.volumeInfo.title,
       author: book.volumeInfo.authors ? book.volumeInfo.authors[0] : null,
-      // image: book.volumeInfo.imageLinks.thumbnail ? book.volumeInfo.imageLinks.thumbnail : null,
-      // image: book.volumeInfo.imageLinks.thumbnail,
-      // publisher: book.volumeInfo.publisher ? book.volumeInfo.publisher : null,
-      // savedStatus: handleBookReload(book.id, savedBooks)
+      image: book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : '',
+      publisher: book.volumeInfo.publisher ? book.volumeInfo.publisher : null,
+      savedStatus: handleBookReload(book.id, savedBooks)
     }
   })
   console.log('filteredBooks', filteredBooks);
